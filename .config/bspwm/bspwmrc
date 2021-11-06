@@ -4,7 +4,7 @@
 #### AUTOSTART ####
 xrandr --output eDP1 --mode 1280x720
 sxhkd &
-feh --bg-scale --randomize /usr/share/backgrounds/*
+# feh --bg-scale --randomize /usr/share/backgrounds/*
 picom --experimental-backend -b &
 ./.config/polybar/launch.sh &
 nm-applet &
@@ -51,7 +51,4 @@ xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_DisplayPort-1)
 xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_HDMI-A-0)
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
